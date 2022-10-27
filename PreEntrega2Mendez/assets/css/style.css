@@ -1,0 +1,389 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Comienzo de CSS para el Header */
+ul {
+    overflow: hidden;
+    list-style: none;
+}
+
+ul li {
+    float: left;
+}
+
+
+li a {
+    display: block;
+    color: black;
+    padding: 14px 30px;
+    text-decoration: none;
+    transition: color 0.1s;
+}
+
+li a:hover {
+    color: #FF90E8;
+    text-decoration: none;
+}
+
+.divImage {
+    text-align: center;
+    display: flex;
+}
+
+.PicHead {
+    width: 500%;
+    float: initial;
+    margin: 30px;
+    height: 100%;
+}
+
+.SecHead {
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 2px;
+    border: solid 2px #111;
+}
+
+.ButtondedansNav {
+    background-color: #000;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.ButtondedansNav:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Fin de CSS para el Header */
+/* Comienzo de CSS para Section 1 - Left*/
+.section1 {
+    background-color: #FF90E8;
+    padding-top: 200px;
+    padding-bottom: 250px;
+    border: solid 2px #111;
+    text-align: center;
+    font-size: 40px;
+}
+.section2 {
+    background-color: #FFC900;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    border: solid 2px #111;
+    text-align: center;
+    font-size: 40px;
+}
+.header1{
+    font-size: 80px;
+}
+
+.glow-on-hover {
+    width: 300px;
+    height: 70px;
+    margin-left: 40%;
+    padding-bottom: 15px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 3px;
+    top: -200px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 3px;
+}
+
+.glow-on-hover:active {
+    color: #FFFFFF
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 3px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.p1 {
+    font-size: 24px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+/* Fin de CSS para el Section 1 - Left */
+:root {
+    --color-background: #31037D;
+    --axis-x: 1px;
+    --axis-y: 1rem;
+    --delay: 10;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-orange: #D49C3D;
+    --color-red: #D14B3D;
+    --color-violet: #CF52EB;
+    --color-blue: #44A3F7;
+    --color-green: #5ACB3C;
+    --color-yellow: #DEBF40;
+    --color-foreground: var(--color-white);
+    --font-name: Righteous;
+}
+
+html,
+body {
+    font-size: 24px;
+}
+
+.c-rainbow {
+    counter-reset: rainbow;
+    position: relative;
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+}
+
+.c-rainbow__layer {
+    --text-color: var(--color-foreground);
+    counter-increment: rainbow;
+    font-size: 3rem;
+    color: var(--text-color);
+    text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black), -1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black), 4px 4px 0 rgba(0, 0, 0, 0.2);
+    animation: rainbow 1.5s ease-in-out infinite;
+}
+
+.c-rainbow__layer:nth-child(1) {
+    animation-delay: calc(1 / var(--delay) * 1s);
+    left: calc(var(--axis-x) * 1);
+    z-index: -10;
+}
+
+.c-rainbow__layer:nth-child(2) {
+    animation-delay: calc(2 / var(--delay) * 1s);
+    left: calc(var(--axis-x) * 2);
+    z-index: -20;
+}
+
+.c-rainbow__layer:nth-child(3) {
+    animation-delay: calc(3 / var(--delay) * 1s);
+    left: calc(var(--axis-x) * 3);
+    z-index: -30;
+}
+
+.c-rainbow__layer:nth-child(4) {
+    animation-delay: calc(4 / var(--delay) * 1s);
+    left: calc(var(--axis-x) * 4);
+    z-index: -40;
+}
+
+.c-rainbow__layer:nth-child(5) {
+    animation-delay: calc(5 / var(--delay) * 1s);
+    left: calc(var(--axis-x) * 5);
+    z-index: -50;
+}
+
+.c-rainbow__layer:nth-child(6) {
+    animation-delay: calc(6 / var(--delay) * 1s);
+    left: calc(var(--axis-x) * 6);
+    z-index: -60;
+}
+
+.c-rainbow__layer:nth-child(7) {
+    animation-delay: calc(7 / var(--delay) * 1s);
+    left: calc(var(--axis-x) * 7);
+    z-index: -70;
+}
+
+.c-rainbow__layer:not(:first-child) {
+    position: absolute;
+    top: 0;
+}
+
+.c-rainbow__layer--white {
+    --text-color: var(--color-white);
+}
+
+.c-rainbow__layer--orange {
+    --text-color: var(--color-orange);
+}
+
+.c-rainbow__layer--red {
+    --text-color: var(--color-red);
+}
+
+.c-rainbow__layer--violet {
+    --text-color: var(--color-violet);
+}
+
+.c-rainbow__layer--blue {
+    --text-color: var(--color-blue);
+}
+
+.c-rainbow__layer--green {
+    --text-color: var(--color-green);
+}
+
+.c-rainbow__layer--yellow {
+    --text-color: var(--color-yellow);
+}
+
+@keyframes rainbow {
+
+    0%,
+    100% {
+        transform: translatey(var(--axis-y));
+    }
+
+    50% {
+        transform: translatey(calc(var(--axis-y) * -1));
+    }
+}
+
+.rain {
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 33%;
+    margin-top: -10%;
+    background-color: #000;
+
+}
+
+/* -------------------------------------------------------------------------------- */
+
+/* Comienzo de CSS para Grids - Index */
+
+.galeria {
+    display: grid;
+    grid-template-areas:
+        'foto3 foto3 foto2 foto2 foto2 foto2'
+        'foto3 foto3 foto4 foto1 foto1 foto1'
+        'foto6 foto6 foto6 foto6 foto5 foto5';
+    grid-template-columns: repeat(6, auto);
+    align-content: stretch;
+    gap: 10px;
+    padding: 0.5vw;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.galeria>div>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* https://developer.mozilla.org/es/docs/Web/CSS/object-fit | El contenido reemplazado se dimensiona para mantener su relación de aspecto mientras llena el cuadro de contenido completo del elemento. Si la relación de aspecto del objeto no coincide con la relación de aspecto de su caja, entonces el objeto se recortará para que se ajuste.  */
+}
+
+.foto1 {
+    grid-area: foto1;
+}
+
+.foto2 {
+    grid-area: foto2;
+}
+
+.foto3 {
+    grid-area: foto3;
+}
+
+.foto4 {
+    grid-area: foto4;
+}
+
+.foto5 {
+    grid-area: foto5;
+}
+
+.foto6 {
+    grid-area: foto6;
+}
+
+.galeria>div {
+    background-color: #464646;
+}
+
+/* ---------------------------------------------------------- */
+/* Comienzo de CSS para Footer */
+.footer1 {
+    background-color: #000;
+    color: #FFFFFF;
+    padding-top: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 70px;
+}
+
+.footerimg1 {
+    width: 20%;
+}
+
+.footerp1 {
+    margin-top: 20px;
+    position: static;
+}
+
+ol {
+    list-style: none;
+}
+
+
+/* Página de Contacto */
+
+.form-group{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.allForm{
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
